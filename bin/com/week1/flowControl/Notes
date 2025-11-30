@@ -1,0 +1,115 @@
+DAY 2 - Flow Control 
+
+If / Else
+Else/If                 ----> Conditional Statement 
+Nested If 
+Switch
+
+For
+while                   ------> Looping Statement
+Do while
+
+Break;
+Continue;               ------> Jump Statement
+return;
+
+If :    Boolean  isRaining = false;
+        
+        if(isRaining){
+             Bring a umbrella!
+        }
+
+Else : if false else will execute 
+       
+       int age = 13
+
+       if(age>=18) {
+            can cast vote!
+       }else {
+          cant cast vote!
+       }
+
+Else - If : if(condition 1){     //true
+                statement 1      //will execute
+            } else if(condition2 ){
+                   statement 2  
+            } else {
+                   statement 3
+            }
+Nested-If : 
+
+if(condition 1){             //false
+   if(condition 1){
+        exp;
+    }else{
+        exp;
+    }
+}else{
+    exp;
+}
+
+
+Switch : switch (condition){
+           case 1:
+               exp
+               break;    //Important
+           case 2:
+               exp
+               break;
+           case 3:
+               exp
+               break;
+           default:
+               sysout
+         }
+           
+While : Unless condition is true
+        n=0
+        while(n < 100){             //0....100  //1....100  //1....99  //0....101  //0....99
+            sysout n;
+            if() continue;
+            n++;
+        }
+
+Do-While :  n = 0
+            do{
+              sysout (n);
+              n++;
+             }while(n>100);
+
+For :  when u know how times to execute a loop we for                i=2
+
+       for(initialization ; condition ; inc/dec){  //int i=0; i<=100; i++
+            sysout(n); //0,1,2
+          }
+
+       for(int i=0; i<=5; i++){
+           if(i==3)  
+              continue;           //When we want to skip the particular condition and execute the rest
+       sysout(i);
+       }
+
+
+
+
+
+for(int i=1; i<=5; i++){        //i =1
+     for(int j=5; j>=i; j--){    //j=3
+          sysout("*");
+   }
+      sysout();
+}
+
+
+
+*****    
+****
+***
+**
+*
+
+*****
+*****
+*****
+*****
+*****
