@@ -1,0 +1,73 @@
+Day 1 - JAVA Basics
+
+Programming language - human and computer (English - binary sequence) Eg: C, C++, Python, Java, C#, java script, Golang 
+
+JAVA - Backend 
+----------------
+
+1995 - Sun (Oracle) 
+Latest version:- java 25
+
+Major Feature 
+   -> Platform independent 
+
+   -> OOP - object oriented language (not 100%)
+
+   -> Multithreading 
+
+
+JVM (Byte Code) <- Complier <- Java program
+
+JAVA VIRTUAL MACHINE (JVM)  --------------> JDK (JAVA DEVELOPMENT KIT) 
+{JDK -> JRE -> JVM} 
+
+
+Real - World : Ecommerce AMAZON, HDFC, UBER, OLA
+
+
+
+
+VARIABLE | DATATYPES | OPERATORS 
+
+
+VARIABLE : Primitive - Reference  
+           Local - Instance - Static 
+
+
+DATATYPES : 
+
+Byte      8 bit - 0 -        byte b = 100;
+Short     16 bit   - 0 -     short s = 20000;
+Int       32 bit   - 0 -     int n = 42;
+Long      64 bit   - 0 -     long l = 42L;
+Float     32 bit   - 0.0 -   float f = 9.21f;
+Double    64 bit             double d = 9.675362;
+
+String    //Not a datatype   String s = "Nivetha";
+Char      16 bit   -'A' '\u0000'   -  char ch = 'B';
+
+Boolean   1 bit   - false -   boolean ok = true;
+
+
+OPERATORS: 
+
+Arithmetic :-   + - * / %
+
+Relational :-   == , < , > <= , >= , !=
+
+Logical :-      && ! || 
+
+Ternary :-      __ ? __ ? a : b
+
+Unary :-        ++, --
+
+
+
+
+
+
+
+
+
+
+
