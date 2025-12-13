@@ -1,0 +1,23 @@
+Week 2
+
+Building blocks of Oops
+
+Class , Object   - template/blueprint is
+
+Candle maker - vessel, wax,
+
+Constructor - object initialization, developers to set up object state
+              default (no-arg) | parameterized constructor
+
+this keyword - Refers to current object / Current class instance variable
+
+
+Oops - not 100%
+
+Encapsulation  - wrapping data and methods in single unit
+Abstraction    - class without providing implementation, leaving that to the subclass (Abstract class,Interface)
+Polymorphism   - multiple forms (compile-time/method overloading , run-time/method riding)
+Inheritance    - Inherit (method+variables) to another class extends
+                 single inheritance, multilevel, hierachical, multiple(interface)
+
+ 
