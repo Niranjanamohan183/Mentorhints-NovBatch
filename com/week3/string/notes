@@ -100,4 +100,4 @@ Inerface : List, Set, Map
 
 List - ArrayList, LinkedList           - Odered Collection, duplicates
 Set - HashSet, TreeSet, LinkedHashSet  - Collection unique
-Map - HashMap, TreeMap, LinkedHashMap  - Key - value pair key is unique, value is duplicate
+Map - HashMap, TreeMap, LinkedHashMap  - Key - value pair key is unique, value is duplicate 
