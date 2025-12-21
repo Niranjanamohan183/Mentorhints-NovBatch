@@ -8,7 +8,7 @@ public class NestedIf {
 		if (age >= 18) {
 			System.out.println("Old enough to vote!");  //
 			
-			if(isCitizen)
+			if(isCitize)
 				System.out.println("And you are a citizen! Eligible to vote");
 			else
 				System.out.println("And you are not a citizen! Not Eligible to vote");
