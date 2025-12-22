@@ -1,0 +1,176 @@
+Week 4
+ -> Collections 
+ -> Exception Handling
+ -> Multi threading
+ -> Java 8
+
+
+Collections  - Framework
+-----------
+Pre-defined classes and interface                   
+
+java.util -> package
+
+
+Inerface : List, Set, Map, Queue, Vectors
+
+List - ArrayList, LinkedList           - Odered Collection, duplicates
+Set - HashSet, TreeSet, LinkedHashSet  - Collection unique
+Map - HashMap, TreeMap, LinkedHashMap  - <Key - value> pair key is unique, value is duplicate
+
+
+ArrayList            99, 33, 10, 67, 22, 88
+   Dynamic array, Best for fast random access, append-heavy workloads
+   Access - O(1), Middle : O(n), End O(1) 
+
+LinkedList 
+  doublylinked list, Best for frequent insertion/removals at ends
+  O(1) O(N)
+  
+
+import java.util.ArrayList;
+
+ArrayList<String> students = new ArrayList<String>();
+
+students.add("sundar"); -> 
+students.add("ramya");
+students.add("nivetha");
+students.add(4,"nicke");
+students.add(5, "rahul");
+students.add(6, "null");
+students.add(7, "nivetha");
+
+
+String first = students.get(0);
+String second = students.get(1);  //E get(int index) //
+String third = students.get(2);
+
+students.set(8,"Arun");
+
+System.out.println(students);
+
+add(), get(), set(), contains(), size(), remove() -> remove(7), remove(element)
+addAll(index, Collection), clear(), indexOf(element), lastIndexOf(element), 
+
+isEmpty(), containsAll(Collection), equals(), sort( Compartor )
+
+
+LinkedList
+----------
+
+LinkedList<String> l = new LinkedList<String>();
+
+
+l.add("one");
+l.add("two");
+l.add("three");
+l.add("four");
+l.add("five");
+
+System.out.println(l);
+
+l.addFirst("zero");
+
+addFirst(), addLast(), getFirst(), getLast(), removeFirstOccurrence(), removeLastOccurence(), clone() 
+
+
+
+Set - Unique 
+Map - key value
+
+HashSet
+-------
+   internally uses Hashtable, not thread safe - Synchronization, donot allow duplicate 
+
+
+HashSet<String> hs = new HashSet<String>();
+
+//4 = new capacity 4*2 = 8
+
+.add(), clear(), remove(), contains(), size(), clone(), isEmpty()
+
+iterator() //Iterator java.util.iterator;
+
+LinkedHashSet
+-------------
+Unique elements
+Maintains Insertion oder 
+LinkedHashSet<String> hs = new HashSet<String>();
+
+hs.add("Madurai");
+hs.add("Coimbatore");   //output- 
+hs.add("Chennai");
+
+Slower
+
+.add(), clear(), remove(), contains(), size(), clone(), isEmpty()
+
+TreeSet
+-------
+*Unique in insertion sorted order*
+
+Slower
+
+TreeSet<String> ts = new TreeSet<String>();
+
+ts.add("Madurai");
+ts.add("Madurai");
+ts.add("Chennai");
+ts.add("Ch");
+
+print(ts);  //output -  Chennai,Madurai
+
+
+
+HashMap
+-------
+   internally uses Hashing, not thread-safe, key-value 
+
+HashMap<Integer,String> hm = new HashMap<Integer,String>();
+
+
+hm.put(4,"four");
+hm.put(5,"five");
+hm.put(1,"one");
+hm.put(2,"two");
+hm.put(3,"three");
+
+HashMap<String,Integer> hm2 = new HashMap<String,Integer>();
+
+hm.put("null", "980542765");
+
+
+put(key,value), putALl()                 *forEach()*
+clear(), clone(), containsKey(), containsValue(), isEmpty(), get(), remove(), size(), 
+replace(key,value) -> replace(key, oldvalue, newvalue), replaceAll()
+
+
+LinkedHashMap
+-------------
+
+Oder maintain, Key-value 
+
+LinkedHashMap<String,Integer> hm2 = new LinkedHashMap<String,Integer>();
+
+
+
+
+TreeMap
+-------
+stores in a sorted way by *key*
+
+TreeMap<String,Integer> hm2 = new TreeMap<String,Integer>();
+
+hm.put(4,"four");
+hm.put(5,"five");
+hm.put(1,"one");
+hm.put(2,"two");
+hm.put(3,"three");
+
+
+
+-> doublyLinked, Hashing, Hashtable - dsa concepts
+
+
+
+
