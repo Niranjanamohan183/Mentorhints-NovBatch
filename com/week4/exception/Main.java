@@ -19,12 +19,7 @@ public class Main {
 			System.out.println("can");
 		}
 		finally {
-			System.out.println("This block always runs");
-			int result = 10/78687;
-			System.out.println(result);
-			System.out.println("This block always runs");
-			System.out.println("This block always runs");
-			System.out.println("This block always runs");
+			
 		}
 		
 	}
