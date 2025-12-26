@@ -1,4 +1,4 @@
-package com.week4.exception;
+package com.week4.doubt;
 
 import java.util.Scanner;
 
