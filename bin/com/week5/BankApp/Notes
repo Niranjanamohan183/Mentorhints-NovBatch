@@ -1,0 +1,36 @@
+Bank Application
+----------------
+
+Method handling, Oops, Collections, Exception handling 
+
+Total - 3 classes(main(BankApp), service(BankService), exception(InsufficientBalanceException)), 4 methods 
+
+Use Map<Integer, Double>
+
+Key → Account Number
+
+Value → Balance
+
+->Create a Custom Exception - InsufficientBalanceException 
+
+createAccount()
+
+deposit()
+
+withdraw()
+
+showBalance()
+
+
+createAccount(int accNo, double balance)
+
+deposit(int accNo, double amount)
+
+withdraw(int accNo, double amount)  -> Throw InsufficientBalanceException
+
+showBalance(int accNo)
+
+Account created successfully
+Deposit successful
+Insufficient balance
+Current Balance: 7000
