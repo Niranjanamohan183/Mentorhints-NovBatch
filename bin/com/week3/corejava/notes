@@ -1,0 +1,168 @@
+Week 3
+
+Access modifiers
+
+visibility and accessibility 
+
+class, methods, constructors variable 
+
+Types:
+
+public  - anywhere class, any package
+protected - same class, sub class, same package (diff package - extend the class)
+private - only within the declared class (most protected)
+default - class, within same package
+
+
+Non Access modifiers
+
+final, static, abstract  //  synchronized(imp), transient, volatile
+
+Final - cant override (final pi = 3.14;)
+
+static - belongs to class, not specific to object, we can call without creating and object
+
+Abstract - abstract method - directly belongs to abstract class 
+
+public abstract void run();  //declaration 
+
+
+ABSTRACT CLASS: 
+
+its a restricted ( that cant object )
+
+declaration methods(both abstract and default) and variables 
+
+public abstract void run();  //declaration 
+
+abstract class Animal{
+   name;
+   public abstract void animalSound();  //declaration 
+   public void hunting(){
+    ....
+    ....
+   }
+   Animal a = new Animal(); //error
+}
+
+class Tiger extends Animal{
+
+    public void animalSound(){
+        sysout(" ytjhbih" );
+
+     }
+    //override hunting
+}
+
+ Peacock extends Animal{
+
+    public void animalSound(){
+        sysout(" hgbkhrfug" );
+
+     }
+    //override hunting
+    No hunting
+}
+
+
+Keyword:  53 / 50 - 3 Literals (true, false, null)
+-------
+pre-defined / reserved words (java compiler)
+    -> class, public, protected, int char, satic, final, private
+    -> default, print, void extends, implements, float, double, long, Boolean, byte, short
+    -> if else switch  for wile break for each continue import new do case abstract
+    -> interface, this, super, package, synchronized(imp), transient, volatile
+    -> return, try catch, throws throw, finally,true false null - 
+    -> goto, const, strictfp, assert, Enum, instanceof, native
+
+var , exports, 
+
+
+Interface : 
+---------
+achieve abstraction, 100% methods, variables //must override all the methods, cant create object
+cannot contain constructor
+
+cannot object animalSound();
+
+interface Animal{  
+     name;
+     type;    //public, static&final
+   public void animalSound();   // all methods abstract,public by default
+   public void animalColor();
+   public void animalGender();
+   public void animaldomestic();
+
+}
+
+class Dog implements Animal(){
+   public void animalSound();
+   public void animalGender(){ false }
+   public void animaldomestic();
+
+}
+class Dog extends puppy{
+   public void animalColor();
+}
+
+Constructor 
+-----------
+
+cannot have return type like void
+
+object initialization, developers to set up object state
+              default (no-arg) | parameterized 
+
+Default cons - int 0, string null
+
+
+String
+------
+String - Class for handling text "fdghbfxnjst4378909.8975635!@@$!@!      "  = str; str = "Niranjana Mohan"; . "@gmail.com"
+         
+immutable in java  
+
+String str = "Hello";
+String str = "world!";
+
+int x = str.length();
+.concat(); 
+.charAt(1);  //H
+.lowercase();
+.uppercase();
+
+.substring(2,4);  //ell
+.equlas("JAVA");  //true,false
+.equalsIgnoreCase("jAva");
+.compareTo("python"); //negative
+
+.contains("e"); //true
+.replace('e' , 'a'); //
+
+.split(" ");
+
+
+StringBuffer & StringBuilder  = mutable
+
+class main{
+   String s = "";
+   StringBuffer strb = new StringBuffer("Hello");
+}
+
+Can change in vice-versa;
+
+String s = strb.toString();
+
+
+StringBuilder - Serializable(interface)
+
+.insert();
+.delete();
+.reverse();
+
+
+StringBuilder - mutable, not thread-safe , faster, single-
+
+StringBuffer - mutable,  thread-safe, slower, multi-
+
+

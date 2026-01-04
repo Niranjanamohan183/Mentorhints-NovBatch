@@ -1,5 +1,6 @@
 package com.app.BankApplication;
 
-public class TransactionType {
+public enum TransactionType {
+	OPEN, DEPOSIT, WITHDRAW, TRANSFER_OUT, TRANSFER_IN, INTREST, CLOSE
 
 }

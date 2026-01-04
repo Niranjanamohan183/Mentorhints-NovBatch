@@ -1,0 +1,109 @@
+Week 4 - 
+
+Wrapper classes
+
+primitive data type - int, float, char, double, boolean, byte, long, short
+                           |
+                           |
+                  main objective of wrapper class
+
+
+
+Integer, Float, Charatcer, Double, Boolean, Byte, Long, Short
+
+
+1. To wrap primitive into object form so that we can handle primitives also just like objects
+2. To define several utility methods which required for primitives
+
+ Integer i = new Integer(10);
+ int i = 10;
+
+Double b = new Double(10.5);
+
+
+
+Exception Handling
+-------------------
+
+Error  java.lang.error
+
+Exception java.lang.exception
+ 
+-> memory leak ( Out of memory error )
+->Arthimetic exception
+->Indexout bound exception
+
+
+An unexcepted or unwanted event that disturbs the normal flow of code called exception.
+
+
+
+
+try-catch
+
+try{
+  int x = 10
+  a = 10/0;   // ->ArithmeticException
+}
+catch(ArithmeticException e){
+ sysout( Do not / with 0 )
+}
+
+sysout ( a )   -> 1
+
+
+throw and throws - Keywords
+
+Throw explicitly throw a single exception
+
+main()
+if(age<18){
+   throw new ArithmeticException("should be above 18")
+}
+
+Types of Exception 
+
+Build - in Excetion
+
+Checked exception - (complie time) force to handle the exception explicitly eg - file not found exception
+Unchecked exception - (run time) do not need to handle explicit eg - null pointer exception
+
+User-Defined exception
+   -> printStackTrace()
+   -> toString()
+   -> getMessage()
+
+
+Multiple
+
+  try{
+    -----
+    ----- 
+       try{
+          ....
+             ....
+          }
+       catch{      }
+       
+   }
+   catch{
+
+   }
+
+finally{
+       sysout(); //code that always needs to be execute
+}
+
+Built-In Exception
+
+
+ClassNotFoundExc
+IO Exception
+SQL Exception
+Arithmetic Exception
+ClassCastException
+NullPointerException string n;
+arrayIndexOutOfBound 
+IllegalThreadException
+FileNotException
+
