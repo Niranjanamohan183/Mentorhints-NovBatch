@@ -1,0 +1,172 @@
+WEEK 6
+
+1) Coding platform sign up
+2) GitHub, LinkedIn
+3) Resume
+
+Database : 
+  Organized form, Re-use, Re-cover, Accessible, Large set of Data
+2 Database :
+ Relational(RDMS) = (structure: table, ACID, vertically scaling )
+    Ex: MySQL, Oracle, PostgreSQL, Microsoft SQL Server, AWS Aurora
+
+ Non - Relational(No Sql) = (No-structure: flexible, Horizontal scaling, BASE ) 
+    Ex: MongoDB, Redis, DynamoDB
+ 
+
+SQL - Structured Query Language
+
+  To Relational db handle 
+  (CRUD - CREATE, READ, UPDATE, DELETE)
+
+MYSQL : TABLE (Rows-records, Columns-field)
+
+Query - Basic commands
+
+SELECT - Retrieve data
+WHERE - Filter 
+ORDER BY - Sort 
+INSERT - Add
+UPDATE - Modify
+DELETE - Remove
+CREATE - Create (db, table)
+DROP - Delete (table)
+
+SQL DATA TYPES
+
+Numeric : INT (BIGINT SMALLINT TINYINT INT), DECIMAL, FLOAT,REAL, NUMERIC
+
+Binary : BINARY, BLOB
+
+String : CHAR, VARCHAR, TEXT
+
+Boolean : BOOLEAN
+
+Date/Time : DATE, TIME, DATETIME
+
+Special : json, xml, aon ..
+
+
+CREATE TABLE transc (
+   TransID INT PRIMARY KEY,
+   TransDATE DATE,
+   TransTIME TIME
+)
+   
+SQL OPERATORS
+
+Arithmetic  + - / * %
+
+Comparison = != <> <= >=
+
+Logical AND OR NOT
+
+Bitwise & | << >> ^ ~                 
+
+Compound += -= *= /= %=
+
+
+SET Salary = Salary + 3000;
+
+
+CREATE - Database, table 
+
+ USE ______ ;
+ CREATE <TABLE NAME> ;
+
+DROP - Deletes Tables
+
+DROP <TABLE NAME> ;
+
+ALTER - Column name
+
+ALTER TABLE <> ADD mobileNumber int;
+ALTER TABLE <> DROP city;
+ALTER TABLE <> MODIFY COLUMN Address int;
+ALTER TABLE <> RENAME COLUMN city TO country;
+
+RENAME - To rename the database
+
+
+INSERT INTO <table_name> (name , city, mobileNumber)  VALUES ('john', 'chennai', 289745419), ('john', 'chennai', 289745419), ('john', 'chennai', 289745419), ('john', 'chennai', 289745419);
+
+
+TRUNCATE - Remove all records from the table not the table itself
+
+ * int datatype in table alter, create *
+
+
+SQL commenting 
+   --
+   /*  */
+
+UPDATE
+------
+ 
+ UPDATE Demo SET name = 'john paul' WHERE id = '1'
+
+DELETE FROM Demo  WHERE name = 'nira'
+
+SQL CLAUSE
+----------
+
+FROM - table name
+WHERE  - column name WHERE transcAmount > 10000
+HAVING - HAVING balance > 0 
+WITH - 
+ORDER BY -  ASC, DSC
+   FROM Student ODER BY age DESC, name ASC;
+GROUP BY
+   FROM Student GROUP BY name, subject;
+
+LIMIT(rows)
+   FROM Student LIMIT 5;
+  
+DISTINCT(remove duplicates)
+    DISTINCT name From Student; 
+-------
+
+SELECT * FROM <table_name>;
+
+SELECT name, id, address FROM Student;
+
+SELECT name FROM Mark where mark < 40;
+
+SELECT name  COUNT(*) AS Count FROM Student GROUP BY address; 
+
+address     count
+Chennai =    8
+Madurai =    29
+Coimbatore = 2
+
+
+-------
+
+SQL Functions
+-------------
+count()
+min()
+max()
+sum()  SUM(Marks) AS Total_Mark FROM Student;
+avg()
+
+DATA CONSTRAINTS
+-----------------
+
+NOT NULL 
+PRIMARY KEY - unique, not null
+ALTERNATE Key -  unique, will allow null values, can have multiple <ak>
+FOREGIN KEY - 
+
+Student(name<fk>, id <pk>, mobilenumber<ak> , age , subjects, address<ak>, grade, class DEFAULT B, sec, mail UNIQUE) : Mark(name<fk>, mark) : Leave(name, noOFDays)
+
+UNIQUE -  To give unique records for a column
+   
+CHECK - condition  CHECK( age >= 3 ) -- This will not give 
+DEFAULT - To give default values for a specific column
+
+TABLE : ALTER TABLE <>, COPY TABLE <>, RENAME TABLE <>, TEMP TABLE <>, TRUNCATE TABLE <>, DROP TABLE <>
+
+
+
+
