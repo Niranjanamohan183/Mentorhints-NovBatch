@@ -1,0 +1,75 @@
+
+EmpName | dep | empID | salary | 
+
+utfhg     IT    756     1000
+utfhg     non    756     1000
+utfhg     IT    756     1000
+utfhg     IT    756     1000
+utfhg     non    756     1000
+utfhg     IT    756     1000
+utfhg     desk    756     1000
+utfhg     IT    756     1000
+utfhg     desk    756     1000
+
+  
+From emp table group by department salary with sum of total salary 
+
+SELECT department SUM(salary) AS total_salary 
+From Employee 
+Group By dep;
+
+
+Dep | total_salary
+
+IT        5000
+non       2000
+desk      2000
+
+Select * from employee;
+
+EmpName | dep | empID | salary |
+
+utfhg     IT    756     6000
+utfhg     non    756     1000
+utfhg     IT    756     9000
+utfhg     IT    756     4000
+utfhg     non    756     8000
+utfhg     IT    756     10000
+utfhg     desk    756     2000
+utfhg     IT    756     10000
+utfhg     desk    756     50000
+
+Select dep AVG(salary) AS avg_salary
+From Employee
+Group By dep
+ODER BY avg_salary AESC;
+
+Dep | avg_salary
+
+IT        5000
+non       2000
+desk      2000
+
+EmpName   | empID(PK) | salary | depID(FK)
+
+utfhg         756     1000       768
+utfhg         756     1000       324
+utfhg         756     1000
+utfhg        756     1000
+utfhg        756     1000
+utfhg        756     1000
+utfhg       756     1000
+utfhg       756     1000
+utfhg        756     1000
+
+dep | depID(PK) | count 
+
+IT    768     12354
+non   324     213675
+desk   767    90453123
+
+Maintain link between two tables
+
+
+
+

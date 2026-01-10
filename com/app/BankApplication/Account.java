@@ -19,7 +19,7 @@ public class Account {
 		this.accountNumber = accountNumber;
 		this.holderName = holderName == null ? "unknown" : holderName;
 		this.balance = openingBalance;
-		this.transactions.add(Transaction(LocalDateTime.now(), TransactionType.OPEN, openingBalance, balance, "Account Opened"));
+		//this.transactions.add(Transaction(LocalDateTime.now(), TransactionType.OPEN, openingBalance, balance, "Account Opened"));
 		
 		
 	}
