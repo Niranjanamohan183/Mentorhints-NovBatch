@@ -1,0 +1,122 @@
+Week 7
+
+Emp e:
+
+EmpId | Name | DeptID | ManagerId
+12     Ravi     10       32
+123    Anu      20
+1235   Kumar    30       32
+8975   Meera    Null     32
+542    Rahul    50
+32     john     60     Null
+
+Manager m: 
+
+Name | ManagerID | DeptID
+john    32          60
+issac   24          60
+
+
+Dep d:
+
+DeptID | DeptName 
+10         IT
+20       non IT
+30        Desk
+40         Hr
+50       finance
+60       managing
+
+
+JOIN - Is used to combine ROW from two or more tables related to COLUMN 
+
+INNER JOIN - only matching records in both table
+
+SELECT e.Name , d.deptName
+From Emp e 
+Inner JOIN Dep d
+ON e.DeptID = d.DeptID;
+
+OUTER JOIN - returns both matching records and non-matching (include) will fill with NULL values for non match
+
+SELECT e.Name , d.deptName
+From Emp e 
+OUTER JOIN Dep d
+ON e.DeptID = d.DeptID;
+
+LEFT JOIN (left outer join) - returns all rows from left table matching rows from right table 
+               if not match null
+
+
+SELECT e.Name , d.deptName
+From Emp e (left)
+LEFT JOIN Dep d (right)
+ON e.DeptID = d.DeptID;
+
+Ravi  IT
+Anu   non
+kumar desk
+Meera Null
+Rahul finance
+
+
+
+RIGHT JOIN (right outer join) - returns all rows from right table matching rows from left table 
+               if not match null
+
+SELECT e.Name , d.deptName, 
+From Emp e (left)
+Right JOIN Dep d (right)
+ON e.DeptID = d.DeptID;
+
+Ravi  IT
+Anu   non
+kumar desk
+Null  HR
+Null  finance
+
+
+FULL JOIN - Returns all records from both table. 
+
+SELECT e.Name , d.deptName, 
+From Emp e (left)
+FULL JOIN Dep d (right)
+ON e.DeptID = d.DeptID;
+
+Ravi  IT
+Anu   non
+kumar desk
+Meera Null
+Rahul finance
+Null  HR
+
+CROSS JOIN - will not use* ( left X right ) 25 records - rows Cartesian product - every row X every row
+
+SELF JOIN - join where the table joins with itself 
+
+
+Emp - Manager 
+
+
+SQL VIEWs
+
+A sql View is a virtual based on result SELECT statement. 
+
+That does not physical data stored in db.
+
+CREATE VIEW view_name AS 
+SELECT column 1, column 2, ...
+FROM table_name
+WHERE Conditon;
+
+CREATE VIEW Company_view AS 
+SELECT name, salary
+FROM emp
+WHERE Conditon = 'IT';
+
+
+Select * From Company_view;
+
+
+VIEW : read, reuse, securtiy
+
