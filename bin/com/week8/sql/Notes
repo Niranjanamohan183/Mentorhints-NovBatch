@@ -1,0 +1,148 @@
+Week 8 
+
+Store Procedure:
+   saved sql multiple quires procedure ( with name )
+ “reuse” , security, transactions 
+
+To Create store procedure:
+
+DELIMITER $$
+
+...
+...
+...
+...
+
+DELIMITER;
+
+-----------------------
+
+DELIMITER $$
+
+CREATE PROCEDURE getTranscation(acc_id, acc_name)
+BEGIN
+   SELECT * FROM transaction where acc_id = acc_id;
+END$$
+
+DELIMITER;
+--------------------------
+
+
+CALL getTranscation(45160985, @acc_name)
+SELECT @acc_name;
+
+to fetch account details -> transaction details ->>>> acc details + transaction(statement) 
+
+
+Parameters - IN, OUT, INOUT
+Control flow - IF, CASE, LOOP, WHILE, REPEAT
+
+IF count = 0 THEN
+   emp_number = null SET message_text = “Employee details are not there”;
+END IF;
+
+--------------------------------------------------------------------------
+
+
+TRANSACTION 
+
+     all - or - nothing  ROLLBACK; 
+
+1.check for authentication //
+ ---- Fail ----
+2.fetch person1 's account details
+3.fetch person2's account details //not in gpay
+4.debit money from person1's account - success 
+5.add money to person2's account - fail 
+ROLLBACK;
+6. both will got the message with money debited and money received .
+
+1.order creation
+2.send order id to fronend
+3.select payment type // gpay , phonepe, Paytm,  {cash on}
+     4.authentication // 
+---- Fail -----
+     5.verfication(orderid, user details, bank details)  // skip
+--- order placed ---
+6.success
+
+
+1.Select Any UPI app first 
+2.Then enter another upi id mobile no
+3.In backend checks the person account active balance
+4. Active balance  means were able to send money
+----- Insufficient balance ------
+5.And banks checks our balance to send money or not
+6.if available we'll send another person
+7.Check password and send them
+8.Alert message  for debited will created
+9.Alert message  for Credited will created 
+10.Transaction record will create
+
+
+ACID Property : 
+
+A - Atomicity = all or nothing, entire process succeeds, If any part fails entire transaction will rollback
+C - Consistency = database valid state in database before after transaction (data integrity) 
+I - Isolation = each transaction, should execute on running - concurrent transaction should not interfere each other
+D - Durability = once the transaction success -  the data is permanent 
+
+
+START TRANSACTION;
+
+SAVEPOINT savepoint1;
+
+Update accounts set balance = balance - 1000 where acc_id =1 AND balance >=1000;
+
+...
+....
+..... //
+
+SAVEPOINT savepoint2;
+
+...
+....
+
+Update accounts set balance = balance + 1000 where acc_id =2; //
+
+SAVEPOINT savepoint3;
+...
+...
+
+ROLLBACK TO savepoint2;
+
+COMMIT;
+
+
+SELECT * FROM balance;
+
+
+-------------------------------------------------------------------------------
+
+Indexing 
+
+Read - instead of scanning entire table we can directly jump to required row/data
+
+Primary index 
+Unique index 
+Full Text index - MATCH, AGAINST
+Composite index - two columns (first_name, last_name)
+
+
+CREATE INDEX <index_col_name> ON <table_name> (column_name);
+
+
+CREATE INDEX <index_col_name> ON <table_name> (column_name, column_name);
+
+
+CREATE UNIQUE INDEX <index_col_name> ON <table_name> (column_name);
+
+
+CREATE FULLTEXT INDEX <index_col_name> ON <table_name> (column_name);
+
+
+DROP INDEX <index_col_name> ON <table_name>;
+SHOW INDEX FROM <table_name>;
+
+
+--------------------------------------------------------------------------------------
