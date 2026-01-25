@@ -1,0 +1,37 @@
+Week 9 
+
+File Handling
+-------------
+
+In Java - opening, create , read, write, add, update, delete, close 
+
+
+files - java project (not related)
+
+File Class - java.io // input & output 
+
+ (Create, delete, read)
+
+canRead(), canWrite(), delete(), exists(), createNewFile(), getName(), getAbsolutePath() //"C:/newfolder/project", length() //bytes, list()//String[], mkdir() //creates directory 
+
+I/O Streams in JAVA : 
+
+Byte Stream - InputStream class (FileInputStream, ByteArrayInputStream, BufferedInputStream) 
+              OutputStream class(FileOutputStream, ByteArrayOutputStream, BufferedOutputStream)
+
+
+Character Stream - Reader(FileReader, BufferReader, )
+                   Writer(FileWriter, BufferWriter, )
+ 
+
+File file = new File("sample.txt"); //File Object  Not a actual physical file
+
+file1, file2
+
+file.createNewFile(); //to create only in in the project dir
+
+file.createNewFile("path/file.txt");  // to specify path
+
+file.getParentFile().mkdirs();
+
+
