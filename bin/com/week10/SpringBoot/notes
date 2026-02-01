@@ -1,0 +1,137 @@
+Spring Framework
+
+Spring is a lightweight java framework enterprise 
+
+Features :
+  -> Dependency Injection
+  -> Aspect-oriented programming
+  ->Spring MVC, Spring Data, Spring Cloud, Spring security
+
+Web application, restful api, data processing application, security authentication, messaging-event 
+ 
+DI, IOC, AOP 
+
+Spring Boot : 
+
+Dependency Injection:- 
+
+IOC - Inversion of Control:-
+
+Class Employee{
+ Address address;
+ Employee(){
+      address = new Address();       //Tightly coupled 
+  }
+  ....
+  ....
+  ....
+}
+
+Class Employee{
+   Address address;
+    Employee(Address address){
+      this.address = address;       //Looselly coupled
+  }
+}
+
+
+@Autowired
+Address address;  //Feild Injection
+
+Spring Bean:
+
+A bean is object managed by Spring container.
+
+@Service
+public class publicService{
+   public void sayHello(){
+      sysout("hello from spring");
+  }
+}
+
+Constructor Injection:
+----------------------
+
+@Component
+public class car{
+    private Engine engine;
+   
+    @Autowired
+    Public car(Engine engine){
+       this.engine = engine;
+  }
+}
+
+
+-> code reading
+-> tight coupling
+-> reusability
+
+Bean Lifecycle:
+
+Container started 
+       |
+Bean instantiated  //declare
+       |
+dependencies injected
+       |
+Custom init() //method
+       |
+Bean is fully ready to use
+       |
+
+Custom utility method
+       |
+custom destroy() //method
+
+
+Spring IOC Container
+
+->Creating objects (Beans)
+->Configuring dependencies Dependency Injection(DI)
+->Managing the entire lifecycle of beans
+->xml (pom.xml), application properties, Annotations
+
+Spring ApplicationContext 
+   AnnotationconfigWeb
+   XmlWebApplication
+   FileSystemXmlApplication
+
+
+Spring web- SpringWeb, Jdbc - springjdbc, SpringData, SpringSecurity, 
+    Farmework - Hibernate, JPA
+SpringMVC - CRUD
+
+
+Spring Boot Architecture:
+
+Presentation Layer: 
+      HTTP - 
+      Rest Api -
+      Request validation -
+      Authentication
+      JSON
+      Forwards validated requests to Business layer
+Annotation: @Controller
+
+Business Layer:
+      Implement the business rules, workflow
+      processes validates data
+      Handles the authentication and authorization logic (Spring security)
+      Manages transaction @Transactional
+
+Annotation: @Service
+      
+Persistence Layer:
+     CRUD 
+     database transactions
+     Sql, NoSql
+     Spring Data JPA, Hibernate, R2Db, H2
+
+Annotation: @Repository
+     
+Database Layer:
+     Contains Actual application database 
+     MySql, PostgreSql, Oracle, Server -SQL
+     MangoDB, FireBase, DynamoDB - NoSQL
+     Cloud
