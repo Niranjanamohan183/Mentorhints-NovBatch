@@ -1,0 +1,135 @@
+Spring Boot
+
+Spring framework + Embedded HTTP Server  + xml configuration  = Spring Boot Application
+                     (Tomcat, Jetty)
+
+Advantages of Spring boot
+ -> stand-alone using -jar 
+ -> Embedded Http server such Tomcat, Jetty etc..,
+ -> starter (POM) to Maven configuration
+ -> Production ready - log, metrics, health checks
+ -> pulgins , testing 
+ -> Admin support
+
+properties files: Application.properties // src/resources 
+    default spring boot localhost:8080 (port number) 
+
+YAML Support : JSON 
+
+Spring MVC , Rest, Dynamic web apps, Easy frontend integration , API, HTTP (request/response)
+Spring security , OAuth2 , Eureka
+
+DI Annotations:
+
+@Autowired - Injects dependencies field, constructor, setter.
+
+Class Employee{
+@Autowired
+private Address address;
+
+}
+
+@Qualifer
+
+specifies which bean multiple bean student 1, 2, 3(@qualifer)
+
+@Primary 
+
+specifies default which bean multiple bean student 1, 2, 3, 4(@Primary)
+
+@Bean - configuration class to specifiy 
+
+@Scope - ***
+
+(Singleton, prototype)
+
+@Value
+
+@Lazy 
+Class Rep -
+
+
+Context Configuration :
+
+@Profile("dev") //dev, uat, qa, prod
+
+@Import
+@ImportResource
+
+@PropertySoruce
+
+Core Annotations:
+  "@SpringBootApplication"
+      1) Configuration - marks class configuration source
+      2) EnableAutoConfiguration - automatically configures bean(magic spring boot)
+      3) ComponentScan - Scans packages 
+
+      
+Stereotype Annotations
+
+@Component
+public class EmailService{
+  
+}
+
+@Service
+public class userService{
+
+}
+
+@Service
+public class adminService{
+
+}
+
+
+@Controller - @RestController
+Class HomeController{
+
+}
+
+@Repository -DAO
+public class UserRepository{
+
+}
+
+
+
+REST API - Representational State Transfer
+
+Http  Methods - CRUD Operations
+
+GET - Read    @GetMapping
+    
+POST - Create @PostMapping
+
+PUT - Replace @PutMapping
+
+
+PATCH - Update @PatchMapping
+
+DELETE - Remove @DeleteMapping
+
+
+      JSON - Postman
+
+{
+   "timestamp" : "2026-02-01"
+   "status" : 200
+   "error" : "Validation failed"
+}
+
+Status Code :
+
+200 - OK Success (GET)
+201 - Created - (POST)
+204 - No content - success, no body (PUT/DELETE)
+
+400 - Bad Request
+401 - Unauthorized
+403 - forbidden
+404 - not found
+409 - version confilcts
+422, 429 - Too many request
+
+500 -Internal server error 
